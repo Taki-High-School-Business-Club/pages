@@ -6,5 +6,5 @@
 ##
 # Description of Contents
 ## make_html
-[https://coko-go.github.io/TBC/make_html/index.html](https://coko-go.github.io/TBC/make_html/index.html)
+[https://coko-go.github.io/TBC/make_html/index.html](https://coko-go.github.io/TBC/make_html/index.html).
 This page is used HTML,CSS,JavaScript and JQuery.
