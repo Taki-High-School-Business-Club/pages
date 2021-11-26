@@ -110,7 +110,7 @@ $(document).ready(function () {
       return;
     }
     ytUrl = $("#yt").val();
-    //Main Sentence
+    //Main Sentenceの処理
     let res_main = `<p><!--本文-->${main}</p>`;
     //activeの処理
     let res_active = reqAct(active[0], active[1], active[2]);
