@@ -3,6 +3,9 @@
   font-family: "Noto Sans JP";
   letter-spacing: 0.05em;
 }
+.comment{
+  color:#ddd;
+}
 small {
   font-size: 0.8em;
 }
