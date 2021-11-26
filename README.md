@@ -18,4 +18,6 @@
 # Description of Contents
 ## make_html   [![Website shields.io](https://img.shields.io/website-up-down-green-red/http/shields.io.svg)](https://coko-go.github.io/TBC/make_html/index.html) ![HP-Ver](https://img.shields.io/badge/ver-2.1.-success) 
 [https://coko-go.github.io/TBC/make_html/index.html](https://coko-go.github.io/TBC/make_html/index.html)  
-This page is used HTML,CSS,JavaScript and JQuery.
+このページは、HTML、CSS、JavaScript、JQueryを使用しています。 This page is used HTML,CSS,JavaScript and JQuery. 
+## Utilities
+* AddBr.js - 改行のある文字列に改行ごとにHTMLのbrタグに置き換える関数です。 This function replaces a string with a newline with an HTML br tag for each newline. (from DeepL)
