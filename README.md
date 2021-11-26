@@ -1,6 +1,11 @@
 # TBC
 [![GitHub issues](https://img.shields.io/github/issues/coko-go/TBC.svg)](https://GitHub.com/coko-go/TBC/issues/)
-[![GitHub pull-requests](https://img.shields.io/github/issues-pr/coko-go/TBC.svg)](https://GitHub.com/coko-go/TBC/pulls/)
+[![GitHub pull-requests](https://img.shields.io/github/issues-pr/coko-go/TBC.svg)](https://GitHub.com/coko-go/TBC/pulls/)  
+[![GitHub watchers](https://img.shields.io/github/watchers/coko-go/TBC.svg?style=social&label=Watch&maxAge=2592000)](https://GitHub.com/coko-go/TBC/watchers/)
+[![GitHub forks](https://img.shields.io/github/forks/coko-go/TBC.svg?style=social&label=Fork&maxAge=2592000)](https://GitHub.com/coko-go/TBC/network/)
+[![GitHub stars](https://img.shields.io/github/stars/coko-go/TBC.svg?style=social&label=Star&maxAge=2592000)](https://GitHub.com/coko-go/TBC/stargazers/)
+
+[![Open in Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/coko-go/TBC)
 ## What is this?
 部活で使えるものを多分上げてくよ
 ## LICENSE
