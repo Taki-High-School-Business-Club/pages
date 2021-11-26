@@ -1,4 +1,6 @@
 # TBC
+[![GitHub issues](https://img.shields.io/github/issues/coko-go/TBC.svg)](https://GitHub.com/coko-go/TBC/issues/)
+[![GitHub pull-requests](https://img.shields.io/github/issues-pr/coko-go/TBC.svg)](https://GitHub.com/coko-go/TBC/pulls/)
 ## What is this?
 部活で使えるものを多分上げてくよ
 ## LICENSE
