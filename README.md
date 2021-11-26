@@ -8,12 +8,12 @@
 
 [![Open in Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/coko-go/TBC)
 
-[![License](https://img.shields.io/badge/license-TBL-green)](https://github.com/coko-go/TBC/blob/main/License.md)
+[![License](https://img.shields.io/badge/license-MIT-green)](https://github.com/coko-go/TBC/blob/main/LICENSE)
 
 ## What is this?
 部活で使えるものを多分上げてくよ
 ## LICENSE
-[READ HERE](https://github.com/coko-go/TBC/blob/main/License.md)
+[READ HERE](https://github.com/coko-go/TBC/blob/main/LICENSE)
 ##
 # Description of Contents
 ## make_html   [![Website shields.io](https://img.shields.io/website-up-down-green-red/http/shields.io.svg)](https://coko-go.github.io/TBC/make_html/index.html)  
