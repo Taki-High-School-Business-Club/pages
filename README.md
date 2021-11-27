@@ -20,4 +20,6 @@
 [https://coko-go.github.io/TBC/make_html/index.html](https://coko-go.github.io/TBC/make_html/index.html)  
 このページは、HTML、CSS、JavaScript、JQueryを使用しています。 This page is used HTML,CSS,JavaScript and JQuery. 
 ## Utilities
+#### About
+どうでもいい小物を入れときます
 * AddBr.js - 改行のある文字列に改行ごとにHTMLのbrタグに置き換える関数です。 This function replaces a string with a newline with an HTML br tag for each newline. (from DeepL)
