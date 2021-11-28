@@ -2,6 +2,7 @@
 * {
   font-family: "Noto Sans JP";
   letter-spacing: 0.05em;
+  box-sizing: border-box;
 }
 .comment{
   color:#ddd;
@@ -32,6 +33,9 @@ main {
 article {
   padding: 1.5em 3em;
 }
+article div{
+  margin:2em 0;
+}
 iframe {
   max-width: 100%;
 }
@@ -55,6 +59,23 @@ a:hover {
 }
 header a:hover {
   text-decoration: none;
+}
+/*menu*/
+nav ul{
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  border-bottom: 2px solid #ddd;
+}
+nav li{
+  border-right: 2px solid #ddd;
+  padding: 0.5em 2em;
+  width: 20%;
+  text-align: center;
+}
+nav li:last-child{
+  border-style: none;
 }
 @media (prefers-color-scheme: light) {
   header,

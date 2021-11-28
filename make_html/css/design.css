@@ -1,7 +1,4 @@
 /*共通*/
-* {
-  box-sizing: border-box;
-}
 form ul,
 #bugs li {
   margin: 0;
