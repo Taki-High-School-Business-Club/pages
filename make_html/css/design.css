@@ -163,3 +163,13 @@ button#yt-bt {
     border-bottom: 1px solid #ddd;
   }
 }
+
+@media screen and (max-width:480px) {
+  /*480pxまでのサイズ*/
+}   
+@media screen and (min-width:481px) and (max-width:768px) {
+  /*481px~768pxまでのサイズ*/
+}
+@media screen and (min-width:769px) and (max-width:1200px) {
+  /*769px~1200pxまでのサイズ*/
+}
