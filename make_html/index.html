@@ -51,7 +51,7 @@
 <body id="top">
     <header>
         <a href="#" class="title">
-            <h1>投稿HTML半自動作成Form<small>Ver.2.2.1.</small></h1>
+            <h1>投稿HTML半自動作成Form<small>Ver.2.3</small></h1>
         </a>
         <nav>
             <ul>
@@ -83,11 +83,21 @@
                         <li><textarea id="impress0" name="impress0" placeholder="感想を入力してね"></textarea></li>
                         <li><label for="impress1">今回の感想2</label></li>
                         <li><textarea id="impress1" name="impress1" placeholder="感想を入力してね"></textarea></li>
-                        <li><label for="yt">YouTube</label></li>
-                        <li><input type="url" id="yt" name="yt" placeholder="YouTubeのURLを入力してね"></li>
-                        <li><button type="button" id="yt-bt" class="makehtml">プレビュー</button></li>
+                        <li><label for="media">Media</label></li>
+                        <p></p>
+                        <p></p>
+                        <li><label for="chooseMedia" id="ch-me">Choose a sort of media:</label>
+                            <select id="chooseMedia" name="chooseMedia">
+                                <option value="yt">YouTube</option>
+                                <option value="picture">picture(png,jpeg etc...)</option>
+                                <option value="movie">movie(mp4,avi)</option>
+                                <option value="music">music(mp3,wav)</option>
+                            </select>
+                        </li>
+                        <li><input type="url" id="media" name="media" placeholder="URLを入力してね"></li>
+                        <li><button type="button" id="media-pre-bt" class="makehtml">プレビュー</button></li>
                         <li>
-                            <div id="yt-pre"></div>
+                            <div id="media-pre"></div>
                         </li>
                         <li class="button"><button type="button" class="makehtml">HTMLを作成</button></li>
                     </ul>
@@ -118,22 +128,26 @@
                 <p>2つまで書けます</p>
                 <p>一番上の枠から順番に書いてください</p>
                 <p>変なところから書いても動きます</p>
-                <h3 class="desc">YouTube</h3>
+                <h3 class="desc">メディア</h3>
                 <p>URLをフォームにいれてください</p>
                 <p>URLの形の例</p>
-                <p>https://www.youtube.com/watch?v=exampleID</p>
-                <p>https://youtu.be/exampleID</p>
+                <p>YouTubeの場合</p>
+                <p>https://www.youtube.com/watch?v=exampleID<br>https://youtu.be/exampleID</p>
+                <p>画像、動画,音声の場合</p>
+                <p>https://tacbusinesscl.com/wp-content/uploads/2021/04/example.jpg</p>
+                <a href="https://github.com/Ess2021/GCloud2WP/releases/tag/release">URL発行ツール</a>
                 <p>時間とか付いてるとバグります</p>
                 <h3 class="desc">WordPress上での編集</h3>
                 <ol>
                     <li>新規投稿の作成を選択してビジュアルエディタを開きます</li>
                     <li>「カスタムHTML」ブロックを使用し、このサイトで作ったコードをコピペしてください</li>
+                    <!-- 
                     <ol>
                         <li><b>画像、動画には対応していません。</b>ビジュアルエディタ上で追加してください</li>
                         <small>
-                            <p class="comment">jsはクライアントサイドでの処理ですが、画像のup機能つけるとバックエンドとかの話になるからわからん</p>
+                            <p class="comment">jsはフロントエンドでの処理ですが、画像のup機能つけるとバックエンドとかの話になるからわからん</p>
                         </small>
-                    </ol>
+                    </ol> -->
                     <li>投稿のタイトル、アイキャッチ画像、カテゴリ分けは手動で行ってください</li>
                     <li>後は投稿するだけです</li>
                 </ol>

@@ -79,9 +79,16 @@ button.makehtml::before {
   transform: scaleY(0);
   transition: transform ease 0.3s;
 }
-button#yt-bt {
+button#media-pre-bt {
   margin: 1em;
   transform: scale(80%);
+}
+#ch-me{
+  font-weight: normal;
+  font-size: 0.8em;
+}
+.result .show-type{
+  color:#4169e1;
 }
 @media (prefers-color-scheme: light) {
   .G-link {
@@ -107,14 +114,14 @@ button#yt-bt {
   button.makehtml:hover {
     color: #fff;
   }
-  button#yt-bt {
+  button#media-pre-bt {
     color: #32cd32;
     border-color: #32cd32;
   }
-  button#yt-bt::before {
+  button#media-pre-bt::before {
     background-color: #32cd32;
   }
-  button#yt-bt:hover {
+  button#media-pre-bt:hover {
     color: #fff;
   }
   h3,h4,h5,h6{
@@ -147,14 +154,14 @@ button#yt-bt {
   button.makehtml:hover {
     color: #333;
   }
-  button#yt-bt {
+  button#media-pre-bt {
     color: #32cd32;
     border-color: #32cd32;
   }
-  button#yt-bt::before {
+  button#media-pre-bt::before {
     background-color: #32cd32;
   }
-  button#yt-bt:hover {
+  button#media-pre-bt:hover {
     color: #fff;
   }
   h3,h4,h5,h6 {
