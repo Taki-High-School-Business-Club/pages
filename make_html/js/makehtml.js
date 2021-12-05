@@ -115,6 +115,7 @@ function Media(type,url){
         resMediaType = "Youtube";
       } else {
         result += "No Media";
+        resMediaType = "None";
         ytCode = "";
       }
     } catch (error) {
@@ -129,6 +130,7 @@ function Media(type,url){
       resMediaType = "Picture";
     }else{
       result += "No Media";
+      resMediaType = "None";
       picCode = "";
     }
     return picCode;
@@ -140,6 +142,7 @@ function Media(type,url){
       resMediaType = "Movie";
     }else{
       result += "No Media";
+      resMediaType = "None";
       movCode = "";
     }
     return movCode;
@@ -151,6 +154,7 @@ function Media(type,url){
       resMediaType = "Music";
     }else{
       result += "No Media";
+      resMediaType = "None";
       musicCode = "";
     }
     return musicCode;
