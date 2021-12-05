@@ -1,6 +1,6 @@
 /*タグ単位かよくつかうクラスだけ*/
 * {
-  font-family: "Noto Sans JP";
+  font-family: "lato","Noto Sans JP";
   letter-spacing: 0.05em;
   box-sizing: border-box;
 }
@@ -133,9 +133,11 @@ nav li:last-child{
   }
   article {
     background-color: #333;
+    border-color:#333 ;
   }
   main {
     background-color: #222;
+    border-color:#222 ;
   }
   textarea,
   input {
