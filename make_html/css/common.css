@@ -3,6 +3,8 @@
   font-family: "lato","Noto Sans JP";
   letter-spacing: 0.05em;
   box-sizing: border-box;
+  max-width: 100%;
+  word-break: break-all;
 }
 .comment{
   color:#ddd;
@@ -179,17 +181,31 @@ textarea,input[type="text"],input[type="url"]{
   nav{
     display: none;
   }
+  article {
+    width: 90%;
+  }
+  select{
+    height: 2em;
+  }
 }   
 @media screen and (min-width:481px) and (max-width:768px) {
   nav{
     display: none;
+  }
+  article {
+    width: 80%;
+  }
+  select{
+    height: 2em;
   }
 }
 @media screen and (min-width:769px) and (max-width:1000px) {
   nav{
     display: none;
   }
-  
+  article {
+    width: 70%;
+  }
 }
 /* table{
     border-collapse: collapse;

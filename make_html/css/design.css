@@ -181,6 +181,12 @@ button#media-pre-bt {
   article {
     width: 90%;
   }
+  iframe.G-rep {
+    display: none;
+  }
+  .G-link {
+    display: none;
+  }
 }
 @media screen and (min-width: 481px) and (max-width: 768px) {
   /*481px~768pxまでのサイズ*/
