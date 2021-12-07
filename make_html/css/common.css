@@ -4,7 +4,6 @@
   letter-spacing: 0.05em;
   box-sizing: border-box;
   max-width: 100%;
-  word-break: break-all;
 }
 .comment{
   color:#ddd;
@@ -31,6 +30,9 @@ header {
 main {
   padding: 0;
   border:0.01px solid white;
+}
+.url{
+  word-break: break-all;
 }
 article {
   width: 50%;
@@ -183,6 +185,7 @@ textarea,input[type="text"],input[type="url"]{
   }
   article {
     width: 90%;
+    padding: 1.5em;  
   }
   select{
     height: 2em;
@@ -194,6 +197,7 @@ textarea,input[type="text"],input[type="url"]{
   }
   article {
     width: 80%;
+    padding: 2em;
   }
   select{
     height: 2em;
