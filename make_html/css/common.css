@@ -131,7 +131,7 @@ nav li:last-child{
   a:visited {
     color: #3399ff;
   }
-  article {
+  article,footer {
     background-color: #333;
     border-color:#333 ;
   }
@@ -139,9 +139,18 @@ nav li:last-child{
     background-color: #222;
     border-color:#222 ;
   }
+  select,option{
+    vertical-align: middle;
+  }
+  select,
   textarea,
   input {
-    background-color: rgb(48, 48, 48);
+    background-color: #333;
+  }
+  select:focus,
+  textarea:focus,
+  input:focus{
+    background-color: #444;
   }
   textarea::placeholder,
   input::placeholder {
