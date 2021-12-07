@@ -83,12 +83,12 @@ button#media-pre-bt {
   margin: 1em;
   transform: scale(80%);
 }
-#ch-me{
+#ch-me {
   font-weight: normal;
   font-size: 0.8em;
 }
-.result .show-type{
-  color:#4169e1;
+.result .show-type {
+  color: #4169e1;
 }
 @media (prefers-color-scheme: light) {
   .G-link {
@@ -124,7 +124,10 @@ button#media-pre-bt {
   button#media-pre-bt:hover {
     color: #fff;
   }
-  h3,h4,h5,h6{
+  h3,
+  h4,
+  h5,
+  h6 {
     color: #000;
     background-color: #fff;
     border-bottom: 1px solid #ddd;
@@ -164,19 +167,29 @@ button#media-pre-bt {
   button#media-pre-bt:hover {
     color: #fff;
   }
-  h3,h4,h5,h6 {
+  h3,
+  h4,
+  h5,
+  h6 {
     color: #fff;
     border: none;
     border-bottom: 1px solid #ddd;
   }
 }
 
-@media screen and (max-width:480px) {
-  /*480pxまでのサイズ*/
-}   
-@media screen and (min-width:481px) and (max-width:768px) {
-  /*481px~768pxまでのサイズ*/
+@media screen and (max-width: 480px) {
+  article {
+    width: 90%;
+  }
 }
-@media screen and (min-width:769px) and (max-width:1200px) {
-  /*769px~1200pxまでのサイズ*/
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  /*481px~768pxまでのサイズ*/
+  article {
+    width: 80%;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1200px) {
+  article {
+    width: 70%;
+  }
 }
