@@ -49,7 +49,7 @@
 <body id="top">
     <header>
         <a href="#" class="title">
-            <h1>投稿HTML半自動作成Form <small>Ver.2.3.2</small></h1>
+            <h1>投稿HTML半自動作成Form <small>Ver.2.3.3</small></h1>
         </a>
         <nav>
             <ul>
@@ -115,18 +115,30 @@
         <article id="desc">
             <div>
                 <h2>How To Use</h2>
-                <h3 class="desc">本文</h3>
+                <h3>What's this?</h3>
+                <p>投稿の際に使用するHTMLコードを手動で入力することが非常に無駄な仕事になっていました。これを改善するためにこのフォームではいくつかの項目に入力するだけでHTMLコード自動生成することができます。</p>
+                <p>この説明の目的はこのフォームの使用方法をユーザーに伝えることです。</p>
+                <h4>目次</h4>
+                <ul class="nav">
+                    <li><a href="#main-sen">本文</a></li>
+                    <li><a href="#act">活動内容</a></li>
+                    <li><a href="#imp">今回の感想</a></li>
+                    <li><a href="#desc-media">メディア</a></li>
+                    <li><a href="#wp">WordPress上での編集</a></li>
+                    <li><a href="#bug">既知のバグ</a></li>
+                </ul>
+                <h3 class="desc" id="main-sen">本文</h3>
                 <p>本文を書いてください。</p>
                 <p>この項目は必須です。</p>
-                <h3 class="desc">活動内容</h3>
+                <h3 class="desc" id="act">活動内容</h3>
                 <p>3つまで書けます</p>
                 <p>一番上の枠から順番に書いてください</p>
                 <p>変なところから書くとバグります</p>
-                <h3 class="desc">今回の感想</h3>
+                <h3 class="desc" id="imp">今回の感想</h3>
                 <p>2つまで書けます</p>
                 <p>一番上の枠から順番に書いてください</p>
                 <p>変なところから書いても動きます</p>
-                <h3 class="desc">メディア</h3>
+                <h3 class="desc" id="desc-media">メディア</h3>
                 <p>URLをフォームにいれてください</p>
                 <p><b>URLの形の例</b></p>
                 <p>YouTubeの場合</p>
@@ -147,7 +159,7 @@
                 </ul>
                 <p></p>
                 <a href="https://github.com/Ess2021/GCloud2WP/releases/tag/release" target="_blank">URL発行ツール</a>
-                <h3 class="desc">WordPress上での編集</h3>
+                <h3 class="desc" id="wp">WordPress上での編集</h3>
                 <ol>
                     <li>新規投稿の作成を選択してビジュアルエディタを開きます</li>
                     <li>「カスタムHTML」ブロックを使用し、このサイトで作ったコードをコピペしてください</li>
@@ -161,10 +173,10 @@
                     <li>投稿のタイトル、アイキャッチ画像、カテゴリ分けは手動で行ってください</li>
                     <li>後は投稿するだけです</li>
                 </ol>
-                <h3 class="desc">既知のバグ</h3>
+                <h3 class="desc" id="bug">既知のバグ</h3>
                 <ul>
                     <li>Q:いらないスペースあるんだけど?</li>
-                    <li>A:多分ClipbordAPIの問題じゃないかなあ...</li>
+                    <li>A:多分<a href="https://www.w3.org/TR/clipboard-apis/">ClipboardAPI</a>の問題じゃないかなあ...<small class="comment">しらんけど</small></li>
                     <li>Q:改行が消えるんだけど?</li>
                     <li>A:実装しました!!!</li>
                 </ul>
@@ -197,5 +209,4 @@
         <p class="copyright"></p>
     </footer>
 </body>
-
 </html>

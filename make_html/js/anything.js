@@ -1,3 +1,11 @@
+//ie function
+function isIe() {
+  var ua = navigator.userAgent;
+  return ua.indexOf('MSIE ') > -1 || ua.indexOf('Trident/') > -1;
+}
+if (isIe()) {
+  alert('IEには対応していません');
+}
 $(document).ready(function () {
   //copyright
   var date = new Date();
@@ -7,6 +15,7 @@ $(document).ready(function () {
   } else {
     $(".copyright").text(`2021-${y} coko-go`);
   }
+  
 });
 //スクロール
 window.addEventListener('DOMContentLoaded', () => {
