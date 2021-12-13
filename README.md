@@ -1,4 +1,4 @@
-# TBC
+# Taki-High-School-Business-Club/pages
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/w/coko-go/TBC)  
 [![GitHub issues](https://img.shields.io/github/issues/coko-go/TBC.svg)](https://GitHub.com/coko-go/TBC/issues/)
 [![GitHub pull-requests](https://img.shields.io/github/issues-pr/coko-go/TBC.svg)](https://GitHub.com/coko-go/TBC/pulls/)  
@@ -11,7 +11,10 @@
 [![License](https://img.shields.io/badge/license-MIT-green)](https://github.com/coko-go/TBC/blob/main/LICENSE)
 
 ## What is this?
-部活で使えるものを多分上げてくよ
+部活で使えるHPを多分上げてくよ
+注意事項
+* chromeとedgeは動作確認してるよ。IEは対応する気が全く無いよ
+* 多分jsが使えない状態のブラウザだとちゃんと動作しないよ
 ## LICENSE
 [READ HERE](https://github.com/Taki-High-School-Business-Club/pages/blob/main/LICENSE)
 ##
