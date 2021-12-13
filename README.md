@@ -13,11 +13,11 @@
 ## What is this?
 部活で使えるものを多分上げてくよ
 ## LICENSE
-[READ HERE](https://github.com/coko-go/TBC/blob/main/LICENSE)
+[READ HERE](https://github.com/Taki-High-School-Business-Club/pages/blob/main/LICENSE)
 ##
 # Description of Contents
-## make_html   [![Website shields.io](https://img.shields.io/website-up-down-green-red/http/shields.io.svg)](https://coko-go.github.io/TBC/make_html/) ![HP-Ver](https://img.shields.io/badge/ver-2.3-success) 
-[https://coko-go.github.io/TBC/make_html/](https://coko-go.github.io/TBC/make_html/)  
+## make_html   [![Website shields.io](https://img.shields.io/website-up-down-green-red/http/shields.io.svg)](https://Taki-High-School-Business-Club.github.io/pages/make_html/) ![HP-Ver](https://img.shields.io/badge/ver-2.3-success) 
+[https://Taki-High-School-Business-Club.github.io/pages/make_html/](https://Taki-High-School-Business-Club.github.io/pages/make_html/)  
 このページは、HTML、CSS、JavaScript、JQueryを使用しています。 This page is used HTML,CSS,JavaScript and JQuery. 
 ## Utilities
 #### About
