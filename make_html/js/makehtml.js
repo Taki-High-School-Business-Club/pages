@@ -50,6 +50,7 @@ function ReqImp(imp0, imp1) {
   try {
     if (imp0.length != 0 && imp1.length !=0) {
       imp_sen = `<li><!--感想1-->${imp0}</li><li><!--感想2-->${imp1}</li>`;
+      res_imp = `<fieldset style="border:1px solid #7d7d7d;font-size:100%;padding:20px 20px 0 20px;margin:10px 0;"><legend class="strong">今回の感想</legend><ul>${imp_sen}</ul>`;
     } else if (imp0.length != 0 || imp1.length !=0) {
       let temp_imp;
       let count_imp;
@@ -61,10 +62,11 @@ function ReqImp(imp0, imp1) {
         temp_imp = imp1;
       }
       imp_sen = `<li><!--感想${count_imp}-->${temp_imp}</li>`;
+      res_imp = `<fieldset style="border:1px solid #7d7d7d;font-size:100%;padding:20px 20px 0 20px;margin:10px 0;"><legend class="strong">今回の感想</legend><ul>${imp_sen}</ul>`;
     } else {
       result += "No Impressions \n";
+      res_imp = "";
     }
-    res_imp = `<fieldset style="border:1px solid #7d7d7d;font-size:100%;padding:20px 20px 0 20px;margin:10px 0;"><legend class="strong">今回の感想</legend><ul>${imp_sen}</ul>`;
   } catch (error) {
     alert("多分感想の欄を間違えてるんじゃあないかな?");
     return;
@@ -72,14 +74,14 @@ function ReqImp(imp0, imp1) {
   return res_imp;
 }
 function GetTime() {
-  var nowDate = new Date();
-  var year = nowDate.getFullYear();
-  var month = nowDate.getMonth() + 1;
-  var date = nowDate.getDate();
-  var hours = nowDate.getHours();
-  var minutes = nowDate.getMinutes();
-  var seconds = nowDate.getSeconds();
-  var outDate = `<${year}-${month}-${date} ${hours}:${minutes}:${seconds} UTC+9:00>`;
+  let nowDate = new Date();
+  let year = nowDate.getFullYear();
+  let month = nowDate.getMonth() + 1;
+  let date = nowDate.getDate();
+  let hours = nowDate.getHours();
+  let minutes = nowDate.getMinutes();
+  let seconds = nowDate.getSeconds();
+  let outDate = `<${year}-${month}-${date} ${hours}:${minutes}:${seconds} UTC+9:00>`;
   return outDate;
 }
 function MainSentence(sen) {
@@ -95,71 +97,71 @@ function Media(type,url){
     mediaCode = ReqMov(url);
   }else if(type == "music"){
     mediaCode = ReqMusic(url);
-  }
-  function ReqYt(url) {
-    let ytCode;
-    let ytID;
-    try {
-      let spInput = url.split("/");
-      //let ytID;
-      if (spInput[2] == "www.youtube.com") {
-        console.log("normal");
-        const spInput2 = spInput[3].split("=");
-        ytID = spInput2[1];
-        ytCode = `<iframe width="560" height="315" src="https://www.youtube.com/embed/${ytID}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
-        resMediaType = "Youtube";
-      } else if (spInput[2] == "youtu.be" || spInput[2] == "y2u.be") {
-        console.log("min-url");
-        ytID = spInput[3];
-        ytCode = `<iframe width="560" height="315" src="https://www.youtube.com/embed/${ytID}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
-        resMediaType = "Youtube";
-      } else {
-        result += "No Media";
-        resMediaType = "None";
-        ytCode = "";
-      }
-    } catch (error) {
-      alert("YouTubeの例外エラー");
-    }
-    return ytCode;
-  }
-  function ReqPic(url){
-    let picCode;
-    if(url.length !=0 ){
-      picCode = `<img src="${url}">`;
-      resMediaType = "Picture";
-    }else{
+}
+function ReqYt(url) {
+  let ytCode;
+  let ytID;
+  try {
+    let spInput = url.split("/");
+    //let ytID;
+    if (spInput[2] == "www.youtube.com") {
+      console.log("normal");
+      const spInput2 = spInput[3].split("=");
+      ytID = spInput2[1];
+      ytCode = `<iframe width="560" height="315" src="https://www.youtube.com/embed/${ytID}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+      resMediaType = "Youtube";
+    } else if (spInput[2] == "youtu.be" || spInput[2] == "y2u.be") {
+      console.log("min-url");
+      ytID = spInput[3];
+      ytCode = `<iframe width="560" height="315" src="https://www.youtube.com/embed/${ytID}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+      resMediaType = "Youtube";
+    } else {
       result += "No Media";
       resMediaType = "None";
-      picCode = "";
+      ytCode = "";
     }
-    return picCode;
+  } catch (error) {
+    alert("YouTubeの例外エラー");
   }
-  function ReqMov(url){
-    let movCode;
-    if(url.length !=0 ){
-      movCode = `<video controls><source src="${url}"></video>`;
-      resMediaType = "Movie";
-    }else{
-      result += "No Media";
-      resMediaType = "None";
-      movCode = "";
-    }
-    return movCode;
+  return ytCode;
+}
+function ReqPic(url){
+  let picCode;
+  if(url.length !=0 ){
+    picCode = `<img src="${url}">`;
+    resMediaType = "Picture";
+  }else{
+    result += "No Media";
+    resMediaType = "None";
+    picCode = "";
   }
-  function ReqMusic(url){
-    let musicCode;
-    if(url.length !=0 ){
-      musicCode = `<audio controls src="${url}">Your browser does not support the<code>audio</code> element.</audio>`;
-      resMediaType = "Music";
-    }else{
-      result += "No Media";
-      resMediaType = "None";
-      musicCode = "";
-    }
-    return musicCode;
+  return picCode;
+}
+function ReqMov(url){
+  let movCode;
+  if(url.length !=0 ){
+    movCode = `<video controls><source src="${url}"></video>`;
+    resMediaType = "Movie";
+  }else{
+    result += "No Media";
+    resMediaType = "None";
+    movCode = "";
   }
-  return mediaCode;
+  return movCode;
+}
+function ReqMusic(url){
+  let musicCode;
+  if(url.length !=0 ){
+    musicCode = `<audio controls src="${url}">Your browser does not support the<code>audio</code> element.</audio>`;
+    resMediaType = "Music";
+  }else{
+    result += "No Media";
+    resMediaType = "None";
+    musicCode = "";
+  }
+  return musicCode;
+}
+return mediaCode;
 }
 $(document).ready(function () {
   //makehtml
