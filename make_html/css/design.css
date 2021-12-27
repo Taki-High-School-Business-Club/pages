@@ -55,6 +55,7 @@ input {
   width: 100%;
   margin: 2em auto;
   word-wrap: break-word;
+  word-break: break-all;
 }
 button.makehtml {
   font-size: 16px;
