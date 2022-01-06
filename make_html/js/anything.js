@@ -8,12 +8,14 @@ if (isIe()) {
 }
 $(document).ready(function () {
   //copyright
-  var date = new Date();
-  var y = date.getFullYear();
+  let date = new Date();
+  let y = date.getFullYear();
+  let startY = 2021;
+  let name = "Taki-High-School-Business-Club";
   if (y == 2021) {
-    $(".copyright").text("2021 coko-go");
+    $(".copyright").text(`${startY} ${name}`);
   } else {
-    $(".copyright").text(`2021-${y} coko-go`);
+    $(".copyright").text(`${startY}-${y} ${name}`);
   }
   
 });

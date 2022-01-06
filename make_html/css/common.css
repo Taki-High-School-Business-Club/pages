@@ -1,55 +1,75 @@
+@charset "UTF-8";
 /*タグ単位かよくつかうクラスだけ*/
 * {
   font-family: "lato","Noto Sans JP";
   letter-spacing: 0.05em;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   max-width: 100%;
 }
-.comment{
-  color:#ddd;
+
+.comment {
+  color: #ddd;
 }
+
 small {
   font-size: 0.8em;
 }
+
 .red {
   color: red;
 }
+
 button {
   cursor: pointer;
 }
+
 body {
   margin: 0;
   padding: 0;
 }
+
 footer {
   margin: 2em 0;
 }
+
 header {
   margin: 2em;
 }
+
+header a:hover {
+  text-decoration: none;
+}
+
 main {
   padding: 0;
-  border:0.01px solid white;
+  border: 0.01px solid white;
 }
-.url{
+
+.url {
   word-break: break-all;
 }
+
 article {
   width: 50%;
   padding: 3em;
   margin: 2em auto;
-  border:0.01px solid #f5f5f5;
+  border: 0.01px solid #f5f5f5;
 }
+
 iframe {
   max-width: 100%;
 }
-img,video{
+
+img, video {
   width: 100%;
 }
+
 footer {
   text-align: center;
-  border:0.01px solid white;
+  border: 0.01px solid white;
 }
+
 h2,
 h3,
 h4,
@@ -59,48 +79,62 @@ h6,
   padding: 0.2em;
   padding-right: 0.5em;
 }
+
 a {
   text-decoration: none;
 }
+
 a:hover {
   text-decoration: underline;
 }
-header a:hover {
-  text-decoration: none;
-}
+
 /*menu*/
-nav ul{
+nav ul {
   list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 100%;
   border-bottom: 2px solid #ddd;
 }
-nav li a{
-  padding: 0.5em 2em;
-  width: 100%;
-  display: block;
-}
-nav li{
-  
+
+nav li {
   width: 20%;
   text-align: center;
   border-right: 2px solid #ddd;
 }
-nav li:last-child{
+
+nav li a {
+  padding: 0.5em 2em;
+  width: 100%;
+  display: block;
+}
+
+nav li:last-child {
   border-style: none;
 }
-textarea,input[type="text"],input[type="url"]{
+
+textarea, input[type="text"], input[type="url"] {
   font-size: 14px;
 }
+
 @media (prefers-color-scheme: light) {
-  header,
+  body,
   article,
   footer {
     background-color: #fff;
   }
+  header {
+    background-color: #fff;
+  }
   header a {
     color: #000 !important;
+  }
+  main {
+    background-color: #f5f5f5;
   }
   a {
     color: #1558d6;
@@ -108,25 +142,22 @@ textarea,input[type="text"],input[type="url"]{
   a:visited {
     color: purple;
   }
-  main {
-    background-color: #f5f5f5;
-  }
-  body {
-    background-color: #fff;
-  }
-  h2{
+  h2 {
     background-color: #333;
     color: #fff;
   }
 }
+
 @media (prefers-color-scheme: dark) {
   * {
     color: #fff;
   }
-  header,
   article,
   footer,
   body {
+    background-color: #333;
+  }
+  header {
     background-color: #333;
   }
   header a {
@@ -138,79 +169,114 @@ textarea,input[type="text"],input[type="url"]{
   a:visited {
     color: #3399ff;
   }
-  article,footer {
+  article, footer {
     background-color: #333;
-    border-color:#333 ;
+    border-color: #333;
   }
   main {
     background-color: #222;
-    border-color:#222 ;
+    border-color: #222;
   }
-  select,option{
+  select {
+    background-color: #333;
     vertical-align: middle;
   }
-  select,
-  textarea,
+  select:focus {
+    background-color: #444;
+  }
+  option {
+    vertical-align: middle;
+  }
+  textarea {
+    background-color: #333;
+  }
+  textarea:focus {
+    background-color: #444;
+  }
+  textarea::-webkit-input-placeholder {
+    color: #f5f5f5;
+  }
+  textarea:-ms-input-placeholder {
+    color: #f5f5f5;
+  }
+  textarea::-ms-input-placeholder {
+    color: #f5f5f5;
+  }
+  textarea::placeholder {
+    color: #f5f5f5;
+  }
+  textarea::-ms-input-placeholder {
+    color: #f5f5f5;
+  }
+  textarea::-ms-input-placeholder {
+    color: #f5f5f5;
+  }
   input {
     background-color: #333;
   }
-  select:focus,
-  textarea:focus,
-  input:focus{
+  input:focus {
     background-color: #444;
   }
-  textarea::placeholder,
-  input::placeholder {
+  input::-webkit-input-placeholder {
     color: #f5f5f5;
   }
-  /* IE */
-  textarea:-ms-input-placeholder,
   input:-ms-input-placeholder {
     color: #f5f5f5;
   }
-  /* Edge */
-  textarea:-ms-input-placeholder,
   input::-ms-input-placeholder {
     color: #f5f5f5;
   }
-  h2{
+  input::placeholder {
+    color: #f5f5f5;
+  }
+  input::-ms-input-placeholder {
+    color: #f5f5f5;
+  }
+  input::-ms-input-placeholder {
+    color: #f5f5f5;
+  }
+  h2 {
     background-color: #333;
     color: #fff;
     border: 1px solid #f5f5f5;
   }
 }
-@media screen and (max-width:480px) {
-  nav{
+
+@media screen and (max-width: 480px) {
+  nav {
     display: none;
   }
   article {
     width: 90%;
-    padding: 1.5em;  
+    padding: 1.5em;
   }
-  select{
+  select {
     height: 2em;
   }
-}   
-@media screen and (min-width:481px) and (max-width:768px) {
-  nav{
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  nav {
     display: none;
   }
   article {
     width: 80%;
     padding: 2em;
   }
-  select{
+  select {
     height: 2em;
   }
 }
-@media screen and (min-width:769px) and (max-width:1000px) {
-  nav{
+
+@media screen and (min-width: 769px) and (max-width: 1000px) {
+  nav {
     display: none;
   }
   article {
     width: 70%;
   }
 }
+
 /* table{
     border-collapse: collapse;
     white-space: nowrap;
@@ -227,3 +293,4 @@ th,td{
     color:#000;
     text-decoration: none;
 } */
+/*# sourceMappingURL=common.css.map */
