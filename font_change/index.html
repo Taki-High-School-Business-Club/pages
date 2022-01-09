@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--css-->
+    <link rel="stylesheet" href="./css/style.css">
+    <!--js-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!--font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Moon+Dance&family=Noto+Sans+JP&family=Noto+Serif+JP&family=Reggae+One&family=Source+Code+Pro&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="Container">
+        <div class="English-Select">
+            <label class="English__Label Select__Label Label">English:</label>
+            <select class="English__Select Select">
+                <option class="English__Select--i1" value="Noto Sans JP">Noto Sans</option>
+                <option class="English__Select--i2" value="Noto Serif JP">Noto Serif</option>
+                <option class="English__Select--i3" value="Moon Dance">Moon Dance</option>
+                <option class="English__Select--i4" value="Source Code Pro">Source Code Pro</option>
+            </select>
+        </div>
+        <div class="Japanese-Select">
+            <label class="Japanese__Label Select__Label Label">Japanese:</label>
+            <select class="Japanese__Select Select">
+                <option class="Japanese__Select--i1" value="Noto Sans JP">Noto Sans JP</option>
+                <option class="Japanese__Select--i2" value="Noto Serif JP">Noto Serif JP</option>
+                <option class="Japanese__Select--i3" value="DotGothic16">DotGothic16</option>
+                <option class="Japanese__Select--i4" value="Reggae One">Reggae One</option>
+            </select>
+        </div>
+        <div class="Test-Text">
+            <div class="en">
+                <p>This is test text.</p>
+                <p>Almost before we knew it, we had left the ground.</p>
+            </div>
+            <div class="ja">
+                <p>人類社会のすべての構成員の固有の尊厳と平等で譲ることのできない権利とを承認することは</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(".Select").change(function () { 
+            const enFont= $('.English__Select').val()
+            console.log("en = " + enFont);
+            const jaFont= $('.Japanese__Select').val()
+            console.log("ja = " + jaFont);
+            $(".en").css("font-family", `${enFont}` );
+            $(".ja").css("font-family", `${jaFont}` );
+        }
+        )
+    </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+.English-Select{
+    font-size: 1.5rem;
+    .English__Label{
+        font-size: inherit;
+    }
+    .English__Select{
+        font-size: inherit;
+        width: 20rem;
+        .English__Select--i1{
+            font-family: 'Noto Sans JP', sans-serif;
+        }
+        .English__Select--i2{
+            font-family: 'Noto Serif JP', serif;
+        }
+        .English__Select--i3{
+            font-family: 'Moon Dance', cursive;
+        }
+        .English__Select--i4{
+            font-family: 'Source Code Pro', monospace;
+        }
+    }
+}
+.Japanese-Select{
+    font-size: 1.5rem;
+    .Japanese__Label{
+        font-size: inherit;
+    }
+    .Japanese__Select{
+        font-size: inherit;
+        width: 20rem;
+        .Japanese__Select--i1{
+            font-family: 'Noto Sans JP', sans-serif;
+        }
+        .Japanese__Select--i2{
+            font-family: 'Noto Serif JP', serif;
+        }
+        .Japanese__Select--i3{
+            font-family: 'DotGothic16', sans-serif;
+        }
+        .Japanese__Select--i4{
+            font-family: 'Reggae One', cursive;;
+        }
+    }
+}
+.Test-Text{
+    border:1px solid black;
+    margin:1em;
+    padding: 1em;
+}

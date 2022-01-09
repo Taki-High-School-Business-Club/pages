@@ -1,0 +1,64 @@
+.English-Select {
+  font-size: 1.5rem;
+}
+
+.English-Select .English__Label {
+  font-size: inherit;
+}
+
+.English-Select .English__Select {
+  font-size: inherit;
+  width: 20rem;
+}
+
+.English-Select .English__Select .English__Select--i1 {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+.English-Select .English__Select .English__Select--i2 {
+  font-family: 'Noto Serif JP', serif;
+}
+
+.English-Select .English__Select .English__Select--i3 {
+  font-family: 'Moon Dance', cursive;
+}
+
+.English-Select .English__Select .English__Select--i4 {
+  font-family: 'Source Code Pro', monospace;
+}
+
+.Japanese-Select {
+  font-size: 1.5rem;
+}
+
+.Japanese-Select .Japanese__Label {
+  font-size: inherit;
+}
+
+.Japanese-Select .Japanese__Select {
+  font-size: inherit;
+  width: 20rem;
+}
+
+.Japanese-Select .Japanese__Select .Japanese__Select--i1 {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+.Japanese-Select .Japanese__Select .Japanese__Select--i2 {
+  font-family: 'Noto Serif JP', serif;
+}
+
+.Japanese-Select .Japanese__Select .Japanese__Select--i3 {
+  font-family: 'DotGothic16', sans-serif;
+}
+
+.Japanese-Select .Japanese__Select .Japanese__Select--i4 {
+  font-family: 'Reggae One', cursive;
+}
+
+.Test-Text {
+  border: 1px solid black;
+  margin: 1em;
+  padding: 1em;
+}
+/*# sourceMappingURL=style.css.map */
