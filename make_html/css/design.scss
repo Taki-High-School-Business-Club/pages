@@ -106,6 +106,18 @@ button#media-pre-bt {
   font-weight: normal;
   font-size: 0.8em;
 }
+.header-news{
+  background-color: #98fb98;
+  width: 100%;
+  padding: 0.5em;
+  p{
+    margin: 0;
+    padding: 0;
+  }
+  &.bug{
+    background-color: red;
+  }
+}
 @media (prefers-color-scheme: light) {
   .G-link {
     display: none;

@@ -132,6 +132,21 @@ button#media-pre-bt {
   font-size: 0.8em;
 }
 
+.header-news {
+  background-color: #98fb98;
+  width: 100%;
+  padding: 0.5em;
+}
+
+.header-news p {
+  margin: 0;
+  padding: 0;
+}
+
+.header-news.bug {
+  background-color: red;
+}
+
 @media (prefers-color-scheme: light) {
   .G-link {
     display: none;

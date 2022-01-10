@@ -34,6 +34,11 @@
                 <option class="Japanese__Select--i4" value="Reggae One">Reggae One</option>
             </select>
         </div>
+        <div class="Font-File-Select">
+            <input type="file" class="Font__File__Select">
+            <p></p>
+            <button type="button" class="Font-File-Select--Submit">フォント変更</button>
+        </div>
         <div class="Test-Text">
             <div class="en">
                 <p>This is test text.</p>
@@ -52,8 +57,12 @@
             console.log("ja = " + jaFont);
             $(".en").css("font-family", `${enFont}` );
             $(".ja").css("font-family", `${jaFont}` );
-        }
+            }
         )
+        $(".Font-File-Select--Submit").click(function () { 
+            console.log($(".Font__File__Select").val());
+            console.log($('.Font__File__Select')[0].files[0].name);
+        });
     </script>
 </body>
 </html>
