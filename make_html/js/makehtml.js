@@ -64,7 +64,7 @@ function ReqImp(imp0, imp1) {
     } else {
       result += "No Impressions \n";
     }
-    res_imp = `<fieldset style="border:1px solid #7d7d7d;font-size:100%;padding:20px 20px 0 20px;margin:10px 0;"><legend class="strong">今回の感想</legend><ul>${imp_sen}</ul>`;
+    res_imp = `<fieldset style="border:1px solid #7d7d7d;font-size:100%;padding:20px 20px 0 20px;margin:10px 0;"><legend class="strong">今回の感想</legend><ul>${imp_sen}</ul></fieldset>`;
   } catch (error) {
     alert("多分感想の欄を間違えてるんじゃあないかな?");
     return;
