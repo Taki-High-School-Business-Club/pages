@@ -71,20 +71,10 @@ function ReqImp(imp0, imp1) {
   }
   return res_imp;
 }
-function GetTime() {
-  var nowDate = new Date();
-  var year = nowDate.getFullYear();
-  var month = nowDate.getMonth() + 1;
-  var date = nowDate.getDate();
-  var hours = nowDate.getHours();
-  var minutes = nowDate.getMinutes();
-  var seconds = nowDate.getSeconds();
-  var outDate = `<${year}-${month}-${date} ${hours}:${minutes}:${seconds} UTC+9:00>`;
-  return outDate;
-}
 function MainSentence(sen) {
   let outSen = AddBr(sen);
-  return outSen;
+  let resSen = `<p>${outSen}</p>`
+  return resSen;
 }
 function Media(type,url){
   if(type == "yt"){
@@ -161,49 +151,56 @@ function Media(type,url){
   }
   return mediaCode;
 }
+function GetTime() {
+  var nowDate = new Date();
+  var year = nowDate.getFullYear();
+  var month = nowDate.getMonth() + 1;
+  var date = nowDate.getDate();
+  var hours = nowDate.getHours();
+  var minutes = nowDate.getMinutes();
+  var seconds = nowDate.getSeconds();
+  var outDate = `<${year}-${month}-${date} ${hours}:${minutes}:${seconds} UTC+9:00>`;
+  return outDate;
+}
+function Input() {}//作るかも
+function MakeCode(main,ac0,ac1,ac2,imp0,imp1,mediaType,mediaUrl) {
+  let res_main = MainSentence(main);
+  let res_active = ReqAct(ac0, ac1, ac2);
+  let res_imp = ReqImp(imp0, imp1);
+  let res_media = Media(mediaType,mediaUrl);
+  const res = `${res_main}${res_active}${res_imp}<div style="text-align :right;"><p style="font-family: 'Lato', sans-serif;">Taki High School Business Club</p></div>${res_media}`;
+  return res;
+}
 $(document).ready(function () {
   //makehtml
   $(".button button").on("click", function () {
     //初期化
     result = "";
     resMediaType = "";
-    //宣言
+    //宣言+入力
     const active = [];
     const impress = [];
-    let main;
-    let mediaUrl;
-    let sortMedia;
+    let main = $("#main").val();
+    let mediaUrl = $("#media").val();
+    let sortMedia = $("#chooseMedia").val();
     //実行時間
     let outTime = GetTime();
     //入力
-    main = MainSentence($("#main").val());
     active[0] = $("#active0").val();
     active[1] = $("#active1").val();
     active[2] = $("#active2").val();
     impress[0] = $("#impress0").val();
     impress[1] = $("#impress1").val();
-    sortMedia = $("#chooseMedia").val();
-    mediaUrl = $("#media").val();
     //本文必須化
     if (main.length == 0) {
       alert("本文を入力してね");
       return;
     }
-    //Main Sentenceの処理
-    let res_main = `<p><!--本文-->${main}</p>`;
-    //activeの処理
-    let res_active = ReqAct(active[0], active[1], active[2]);
-    //impressの処理
-    let res_imp = ReqImp(impress[0], impress[1]);
-    //mediaの処理
-    let res_media = Media(sortMedia,mediaUrl);
-    //Responseまとめる
-    const res = `${res_main}${res_active}${res_imp}<div style="text-align :right;"><p style="font-family: 'Lato', sans-serif;">Taki High School Business Club</p></div>${res_media}`;
-    //Output
+    const res = MakeCode(main,active[0],active[1],active[2],impress[0],impress[1],sortMedia,mediaUrl);
     $(".output").text(res);
     //console
     $(".result").append(
-      `<p>${outTime}</p><p class="end">ALL PROCESSES FINISHED<br><span class="no-con">${result}</span><br><span class="show-type">Media Type:${resMediaType}</span></p>`
+      `<p>${outTime}</p><p class="end">ALL PROCESSES FINISHED<br><span class="no-con">${result}</span><br><span class="show-type">Media:${resMediaType}</span></p>`
     );
   });
   //Media-Preview
