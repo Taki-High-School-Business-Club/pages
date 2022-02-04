@@ -152,14 +152,15 @@ function Media(type,url){
   return mediaCode;
 }
 function GetTime() {
-  var nowDate = new Date();
-  var year = nowDate.getFullYear();
-  var month = nowDate.getMonth() + 1;
-  var date = nowDate.getDate();
-  var hours = nowDate.getHours();
-  var minutes = nowDate.getMinutes();
-  var seconds = nowDate.getSeconds();
-  var outDate = `<${year}-${month}-${date} ${hours}:${minutes}:${seconds} UTC+9:00>`;
+  let nowDate = new Date();
+  let year = nowDate.getFullYear();
+  let month = nowDate.getMonth() + 1;
+  let date = nowDate.getDate();
+  let hours = nowDate.getHours();
+  let minutes = nowDate.getMinutes();
+  let seconds = nowDate.getSeconds();
+  let utc = new Date(Date.UTC());
+  let outDate = `<${year}-${month}-${date} ${hours}:${minutes}:${seconds} UTC+0900>`;
   return outDate;
 }
 function Input() {}//作るかも
