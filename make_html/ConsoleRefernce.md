@@ -8,7 +8,7 @@
 ## HTML作成成功
 HTMLの作成が成功したことを教えてくれます
 ## エラー項目
-| NoActivity | NOImpressions | NoMedia |
+| NoActivity | NoImpressions | NoMedia |
 | :---: | :---: | :---: |
 | 活動内容の欄が入っていないことを知らせます | 感想の欄が入っていないことを知らせます | メディアの欄が入っていないことを知らせます |
 ## メディア項目
