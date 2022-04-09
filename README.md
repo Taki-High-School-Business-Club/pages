@@ -6,7 +6,7 @@
 [![GitHub forks](https://img.shields.io/github/forks/coko-go/TBC.svg?style=social&label=Fork&maxAge=2592000)](https://GitHub.com/Taki-High-School-Business-Club/pages/network/)
 [![GitHub stars](https://img.shields.io/github/stars/coko-go/TBC.svg?style=social&label=Star&maxAge=2592000)](https://GitHub.com/Taki-High-School-Business-Club/pages/stargazers/)  
 
-[![Open in Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/Taki-High-School-Business-Club/pages)
+[![Open in Visual Studio Code](https://vscode.dev/github/badges/open-in-vscode.svg)](https://open.vscode.dev/Taki-High-School-Business-Club/pages)
 
 [![License](https://img.shields.io/badge/license-MIT-green)](https://github.com/Taki-High-School-Business-Club/pages/blob/main/LICENSE)
 
