@@ -1,8 +1,11 @@
 //宣言
-let main_sen;
+let mainSen;
+mainSen = document.getElementById('main');
 //イベント
 window.onload = function(){
     document.getElementById('make-html').onclick = function(){
-        alert("clicked!");
+        //alert("clicked!");
+        mainSen = document.getElementById('main');
+        alert(mainSen.value)
     }
 }
