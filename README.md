@@ -23,3 +23,8 @@
 どうでもいい小物を入れときます
 * AddBr.js - 改行のある文字列に改行ごとにHTMLのbrタグに置き換える関数です。   
 This function replaces a string with a newline with an HTML br tag for each newline. (from DeepL)
+
+## Plan
+### V2.5の作成
+HTMLの変更とJSの変更
+いつできるかは知らん
