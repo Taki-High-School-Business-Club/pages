@@ -7,7 +7,7 @@
 [![GitHub forks](https://img.shields.io/github/forks/coko-go/TBC.svg?style=social&label=Fork&maxAge=2592000)](https://GitHub.com/Taki-High-School-Business-Club/pages/network/)
 [![GitHub stars](https://img.shields.io/github/stars/coko-go/TBC.svg?style=social&label=Star&maxAge=2592000)](https://GitHub.com/Taki-High-School-Business-Club/pages/stargazers/)  
 
-[![License](https://img.shields.io/badge/license-MIT-green)](https://github.com/Taki-High-School-Business-Club/pages/blob/main/LICENSE)
+[![License](https://img.shields.io/badge/License-MIT-green)](https://github.com/Taki-High-School-Business-Club/pages/blob/main/LICENSE)
 
 ## What is this?
 部活で使えるものを多分上げてくよ
@@ -15,7 +15,7 @@
 [READ HERE](https://github.com/Taki-High-School-Business-Club/pages/blob/main/LICENSE)
 ##
 # Description of Contents
-## make_html   [![Website shields.io](https://img.shields.io/website-up-down-green-red/http/shields.io.svg)](https://Taki-High-School-Business-Club.github.io/pages/make_html/) ![HP-Ver](https://img.shields.io/badge/ver-2.3.6-success) 
+## make_html   [![Website shields.io](https://img.shields.io/website-up-down-green-red/http/shields.io.svg)](https://Taki-High-School-Business-Club.github.io/pages/make_html/) ![HP-Ver](https://img.shields.io/badge/ver-2.4.1-success) 
 [https://Taki-High-School-Business-Club.github.io/pages/make_html/](https://Taki-High-School-Business-Club.github.io/pages/make_html/)  
 このページは、HTML、CSS、JavaScript、JQueryを使用しています。 This page is used HTML,CSS,JavaScript and JQuery. 
 ## Utilities
