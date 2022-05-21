@@ -39,7 +39,6 @@
     <!--js-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script type="text/javascript" src="js/smoothscroll.min.js"></script>
-    <script type="text/javascript" src="js/main.js"></script>
     <!--<script type="text/javascript" src="js/makehtml.js"></script>
     <script type="text/javascript" src="js/anything.js"></script>
     <script type="text/javascript" src="js/copy.js"></script>-->
@@ -74,16 +73,19 @@
                                 <p class="red">必須</p>
                             </small></li>
                         <li><textarea id="main" name="main" placeholder="本文を入力してね"></textarea></li>
-                        <li><label for="active0">活動内容1</label></li>
-                        <li><input type="text" id="active0" name="active0" placeholder="活動内容1書いてね"></li>
-                        <li><label for="active1">活動内容2</label></li>
-                        <li><input type="text" id="active1" name="active1" placeholder="活動内容2書いてね"></li>
-                        <li><label for="active2">活動内容3</label></li>
-                        <li><input type="text" id="active2" name="active2" placeholder="活動内容3書いてね"></li>
-                        <li><label for="impress0">今回の感想1</label></li>
-                        <li><textarea id="impress0" name="impress0" placeholder="感想を入力してね"></textarea></li>
-                        <li><label for="impress1">今回の感想2</label></li>
-                        <li><textarea id="impress1" name="impress1" placeholder="感想を入力してね"></textarea></li>
+                        <li id="li-act01"><label for="active0">活動内容01</label><br><input type="text" id="active01" name="active01" placeholder="活動内容01"></li>
+                        <li id="li-act02"><label for="active1">活動内容02</label><br><input type="text" id="active02" name="active02" placeholder="活動内容02"></li>
+                        <li id="li-act03"><label for="active2">活動内容03</label><br><input type="text" id="active03" name="active03" placeholder="活動内容03"></li>
+                        <li>
+                            <button type="button" id="active-increase">ActiveIncrease</button>
+                            <button type="button" id="active-decrease">ActiveDecrease</button>
+                        </li>
+                        <li id = "li-imp01"><label for="impress01">今回の感想01</label><br><textarea id="impress01" name="impress01" placeholder="感想を入力してね"></textarea></li>
+                        <li id = "li-imp02"><label for="impress02">今回の感想02</label><br><textarea id="impress02" name="impress02" placeholder="感想を入力してね"></textarea></li>
+                        <li>
+                            <button type="button" id="impress-increase">ImpressIncrease</button>
+                            <button type="button" id="impress-decrease">ImpressDecrease</button>
+                        </li>
                         <li><label for="media">Media</label></li>
                         <p></p>
                         <p></p>
@@ -210,5 +212,6 @@
         <hr>
         <p class="copyright"></p>
     </footer>
+    <script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>
