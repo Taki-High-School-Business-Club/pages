@@ -18,10 +18,12 @@ I will upload code to use in club activities maybe.
 # Description of Contents
 ## make_html   [![Website shields.io](https://img.shields.io/website-up-down-green-red/http/shields.io.svg)](https://Taki-High-School-Business-Club.github.io/pages/make_html/) ![HP-Ver](https://img.shields.io/badge/ver-2.4.1-success) 
 [https://Taki-High-School-Business-Club.github.io/pages/make_html/](https://Taki-High-School-Business-Club.github.io/pages/make_html/)  
-このページは、HTML、CSS、JavaScript、JQueryを使用しています。 This page is used HTML,CSS,JavaScript and JQuery. 
+このページは、HTML、CSS、JavaScript、JQueryを使用しています.  
+This page is used HTML,CSS,JavaScript and JQuery. 
 ## Utilities
 #### About
 どうでもいい小物を入れときます
+I put some methods in here.
 * AddBr.js - 改行のある文字列に改行ごとにHTMLのbrタグに置き換える関数です。   
 This function replaces a string with a newline with an HTML br tag for each newline. (from DeepL)
 
