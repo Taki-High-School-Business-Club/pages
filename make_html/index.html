@@ -37,12 +37,9 @@
     <!--css-->
     <link rel="stylesheet" href="./css/style.css" />
     <!--js-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script type="text/javascript" src="js/smoothscroll.min.js"></script>
-    <!--<script type="text/javascript" src="js/makehtml.js"></script>
-    <script type="text/javascript" src="js/anything.js"></script>
-    <script type="text/javascript" src="js/copy.js"></script>-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>-->
+    <!--<script type="text/javascript" src="js/smoothscroll.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>-->
 </head>
 
 <body id="top">
@@ -73,15 +70,15 @@
                                 <p class="red">必須</p>
                             </small></li>
                         <li><textarea id="main" name="main" placeholder="本文を入力してね"></textarea></li>
-                        <li id="li-act01"><label for="active0">活動内容01</label><br><input type="text" id="active01" name="active01" placeholder="活動内容01"></li>
-                        <li id="li-act02"><label for="active1">活動内容02</label><br><input type="text" id="active02" name="active02" placeholder="活動内容02"></li>
-                        <li id="li-act03"><label for="active2">活動内容03</label><br><input type="text" id="active03" name="active03" placeholder="活動内容03"></li>
+                        <li id="li-act01"><label>活動内容01</label><br><input type="text" id="act01" name="act01" placeholder="活動内容01"></li>
+                        <li id="li-act02"><label>活動内容02</label><br><input type="text" id="act02" name="act02" placeholder="活動内容02"></li>
+                        <li id="li-act03"><label>活動内容03</label><br><input type="text" id="act03" name="act03" placeholder="活動内容03"></li>
                         <li>
-                            <button type="button" id="active-increase">ActiveIncrease</button>
-                            <button type="button" id="active-decrease">ActiveDecrease</button>
+                            <button type="button" id="active-increase">活動内容追加</button>
+                            <button type="button" id="active-decrease">活動内容削減</button>
                         </li>
-                        <li id = "li-imp01"><label for="impress01">今回の感想01</label><br><textarea id="impress01" name="impress01" placeholder="感想を入力してね"></textarea></li>
-                        <li id = "li-imp02"><label for="impress02">今回の感想02</label><br><textarea id="impress02" name="impress02" placeholder="感想を入力してね"></textarea></li>
+                        <li id = "li-imp01"><label>今回の感想01</label><br><textarea id="imp01" name="imp01" placeholder="今回の感想01"></textarea></li>
+                        <li id = "li-imp02"><label>今回の感想02</label><br><textarea id="imp02" name="imp02" placeholder="今回の感想02"></textarea></li>
                         <li>
                             <button type="button" id="impress-increase">ImpressIncrease</button>
                             <button type="button" id="impress-decrease">ImpressDecrease</button>
@@ -98,11 +95,10 @@
                             </select>
                         </li>
                         <li><input type="url" id="media" name="media" placeholder="URLを入力してね"></li>
-                        <li><button type="button" id="media-pre-bt" class="makehtml">プレビュー</button></li>
-                        <li>
-                            <div id="media-pre"></div>
-                        </li>
-                        <li class="button"><button type="button" class="makehtml" id="make-html">HTMLを作成</button></li>
+                        <li><button type="button" id="media-pre-bt">プレビュー</button></li>
+                        <!--プレビュー結果表示用-->
+                        <li><div id="media-pre"></div></li>
+                        <li class="button"><button type="button" id="make-html" disabled>HTMLを作成</button></li>
                     </ul>
                 </form>
             </div>
@@ -213,5 +209,24 @@
         <p class="copyright"></p>
     </footer>
     <script type="text/javascript" src="js/main.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+        const anchorLinks = document.querySelectorAll('a[href^="#"]');
+        const anchorLinksArr = Array.prototype.slice.call(anchorLinks);
+
+        anchorLinksArr.forEach(link => {
+            link.addEventListener('click', e => {
+            e.preventDefault();
+            const targetId = link.hash;
+            const targetElement = document.querySelector(targetId);
+            const targetOffsetTop = window.pageYOffset + targetElement.getBoundingClientRect().top;
+            window.scrollTo({
+                top: targetOffsetTop,
+                behavior: "smooth"
+                });
+            });
+            });
+        });
+    </script>
 </body>
 </html>
