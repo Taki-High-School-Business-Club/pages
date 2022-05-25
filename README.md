@@ -11,6 +11,7 @@
 
 ## What is this?
 部活で使えるものを多分上げてくよ
+I will upload code to use in club activities maybe.
 ## LICENSE
 [READ HERE](https://github.com/Taki-High-School-Business-Club/pages/blob/main/LICENSE)
 ##
