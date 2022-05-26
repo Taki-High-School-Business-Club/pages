@@ -70,30 +70,31 @@ function decreaseForm(id,mode){
     let a = document.getElementById(`li-${mode + makeIDString(id + 1)}`);
     a.remove();
 }
-function increaseActiveForm(id){
-    var a = document.getElementById("li-act" + makeIDString(id-1));
-    var nowID = makeIDString(id)
-    a.insertAdjacentHTML('afterend',`<li id="${"li-act" + nowID}"><label for="active0">活動内容${nowID}</label><br><input type="text" placeholder="${"活動報告" + nowID}" id="${ 'active'+nowID}"></li>`);
-}
-function decreaseActiveForm(id){
-    var a = document.getElementById("li-act" + makeIDString(id + 1));
-    a.remove();
-}
-function increaseImpressForm(id){
-    var a = document.getElementById("li-imp" + makeIDString(id-1));
-    var nowID = makeIDString(id)
-    a.insertAdjacentHTML('afterend',`<li id="${"li-imp" + nowID}"><label for="impression0">今回の感想${nowID}</label><br><textarea type="text" placeholder="感想を入力してね" id="${'impression'+nowID}"></textarea></li>`);
-}
-function decreaseImpressForm(id){
-    var a = document.getElementById("li-imp" + makeIDString(id + 1));
-    a.remove();
-}
+// function increaseActiveForm(id){
+//     var a = document.getElementById("li-act" + makeIDString(id-1));
+//     var nowID = makeIDString(id)
+//     a.insertAdjacentHTML('afterend',`<li id="${"li-act" + nowID}"><label for="active0">活動内容${nowID}</label><br><input type="text" placeholder="${"活動報告" + nowID}" id="${ 'active'+nowID}"></li>`);
+// }
+// function decreaseActiveForm(id){
+//     var a = document.getElementById("li-act" + makeIDString(id + 1));
+//     a.remove();
+// }
+// function increaseImpressForm(id){
+//     var a = document.getElementById("li-imp" + makeIDString(id-1));
+//     var nowID = makeIDString(id)
+//     a.insertAdjacentHTML('afterend',`<li id="${"li-imp" + nowID}"><label for="impression0">今回の感想${nowID}</label><br><textarea type="text" placeholder="感想を入力してね" id="${'impression'+nowID}"></textarea></li>`);
+// }
+// function decreaseImpressForm(id){
+//     var a = document.getElementById("li-imp" + makeIDString(id + 1));
+//     a.remove();
+// }
 
-//イベント
+//* イベント
 window.onload = function(){
     document.getElementById('main').addEventListener("change",function(){
         console.log("Change action");
         console.log(this.value);
+        //HTML作成ボタンのdisabled切り替え
         if(this.value == false){
             console.log("it's empty!!!");
             makeHtmlButton.disabled = true;

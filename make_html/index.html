@@ -74,14 +74,14 @@
                         <li id="li-act02"><label>活動内容02</label><br><input type="text" id="act02" name="act02" placeholder="活動内容02"></li>
                         <li id="li-act03"><label>活動内容03</label><br><input type="text" id="act03" name="act03" placeholder="活動内容03"></li>
                         <li>
-                            <button type="button" id="active-increase">活動内容追加</button>
-                            <button type="button" id="active-decrease">活動内容削減</button>
+                            <button type="button" id="active-increase" class="increase-decrease">活動内容追加</button>
+                            <button type="button" id="active-decrease" class="increase-decrease">活動内容削減</button>
                         </li>
                         <li id = "li-imp01"><label>今回の感想01</label><br><textarea id="imp01" name="imp01" placeholder="今回の感想01"></textarea></li>
                         <li id = "li-imp02"><label>今回の感想02</label><br><textarea id="imp02" name="imp02" placeholder="今回の感想02"></textarea></li>
                         <li>
-                            <button type="button" id="impress-increase">今回の感想追加</button>
-                            <button type="button" id="impress-decrease">今回の感想削減</button>
+                            <button type="button" id="impress-increase" class="increase-decrease">今回の感想追加</button>
+                            <button type="button" id="impress-decrease" class="increase-decrease">今回の感想削減</button>
                         </li>
                         <li><label for="media">Media</label></li>
                         <p></p>
@@ -210,6 +210,7 @@
     </footer>
     <script type="text/javascript" src="js/main.js"></script>
     <script>
+        //スクロール用 ファイルにして...
         window.addEventListener('DOMContentLoaded', () => {
         const anchorLinks = document.querySelectorAll('a[href^="#"]');
         const anchorLinksArr = Array.prototype.slice.call(anchorLinks);
