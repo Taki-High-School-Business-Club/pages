@@ -73,7 +73,7 @@ input {
   color: #4169e1;
 }
 
-.output {
+#output-box {
   border: 1px solid #ddd;
   border-radius: 5px;
   padding: 0.5em 1em;

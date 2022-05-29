@@ -57,8 +57,8 @@
             </ul>
         </nav>
     </header>
-    <div class="header-news"><!-- if there are bugs, add "bug" into class.s -->
-        <p>&gt;&gt;<b>Update News</b> v.2.4.1 リファレンスの追加<a href="https://github.com/Taki-High-School-Business-Club/pages/blob/main/make_html/ConsoleRefernce.md" target="_blank">View on Github</a></p>
+    <div class="header-news bug"><!-- if there are bugs, add "bug" into class.s -->
+        <p>&gt;&gt;2022/05/29&lt;&lt;This is BETA VERSION. There are MANY MANY MANY BUGS.</p>
     </div>
     <main>
         <article id="form">
@@ -69,7 +69,7 @@
                         <li><label for="main">本文</label><br><small>
                                 <p class="red">必須</p>
                             </small></li>
-                        <li><textarea id="main" name="main" placeholder="本文を入力してね"></textarea></li>
+                        <li><textarea id="main" name="main" placeholder="本文を入力してね" required></textarea></li>
                         <li id="li-act01"><label>活動内容01</label><br><input type="text" id="act01" name="act01" placeholder="活動内容01"></li>
                         <li id="li-act02"><label>活動内容02</label><br><input type="text" id="act02" name="act02" placeholder="活動内容02"></li>
                         <li id="li-act03"><label>活動内容03</label><br><input type="text" id="act03" name="act03" placeholder="活動内容03"></li>
@@ -104,13 +104,13 @@
             </div>
             <div id="output">
                 <h2>出力</h2>
-                <div class="output">
+                <div id="output-box">
                     Output
                 </div>
                 <button type="button" id="copy-button" class="makehtml">コピー</button>
-                <div class="result">
+                <!--<div class="result">
                     <p>Console</p>
-                </div>
+                </div>-->
             </div>
         </article>
         <article id="desc">
