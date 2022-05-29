@@ -29,21 +29,11 @@ label {
   font-size: 1.2em;
   font-weight: bold;
 }
-.copyright::before {
-  font-family: "Font Awesome 5 Free";
+#copyright::before {
+  font-family: "Font Awesome 6 Free";
   content: "\f1f9";
   font-weight: 400;
 }
-.dl-content::before {
-  font-family: "Font Awesome 5 Free";
-  content: "\f15c";
-  font-weight: 400;
-}
-button.makehtml:hover::before {
-  transform-origin: 50% 100%;
-  transform: scaleY(1);
-}
-
 input {
   border: 1px solid #ddd;
   border-radius: 5px;
@@ -66,7 +56,7 @@ input {
     color: #4169e1;
   }
 }
-.output{
+#output-box{
   border: 1px solid #ddd;
   border-radius: 5px;
   padding: 0.5em 1em;
@@ -74,33 +64,6 @@ input {
   margin: 2em auto;
   word-wrap: break-word;
   word-break: break-all;
-}
-button.makehtml {
-  font-size: 16px;
-  font-weight: bold;
-  background: transparent;
-  padding: 18px 30px;
-  border-radius: 6px;
-  position: relative;
-  z-index: 1;
-  transition: 0.3s;
-  width: 15em;
-  &::before{
-    content: "";
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    transform-origin: 50% 0%;
-    transform: scaleY(0);
-    transition: transform ease 0.3s;
-  }
-}
-button#media-pre-bt {
-  margin: 1em;
-  transform: scale(80%);
 }
 #ch-me {
   font-weight: normal;
@@ -115,9 +78,72 @@ button#media-pre-bt {
     padding: 0;
   }
   &.bug{
-    background-color: red;
+    background-color: #ff0000;
   }
 }
+/*ボタン系*/
+button{
+  background-color: #000;
+  border:1px solid #000;
+  border-radius: 100vh;
+  padding: 1em 2em;
+  margin: 1em 0;
+  color:#fff;
+  transition: 0.1s;
+  &.increase-decrease{
+    border-radius: 1vh;
+    background-color: #fff;
+    color:#000;
+    border: 1.5px solid #afafaf;
+    margin:1em 0.5em;
+    &:hover{
+      background-color: #ddd;
+    }
+  }
+  &#make-html{
+    font-size: 1.2em;
+    background-color: #ff4500;
+    border-color: #ff4500;
+    &:hover{
+      background-color: #b33000;
+      border-color: #b33000;
+    }
+    &:disabled{
+      opacity: 0.4;
+      cursor: not-allowed;
+      &:hover{
+        background-color: #ff4500;
+        border-color: #ff4500;
+      }
+    }
+  }
+  &#media-pre-bt{
+    font-size: 1.2em;
+    padding:1em 2.5em;
+    margin:0;
+    background-color: #28a745;
+    border-color: #28a745;
+    &:hover{
+      background-color: #18662b;
+      border-color: #18662b;
+    }
+  }
+  &#copy-button{
+    width: 10rem;
+    height: 3rem;
+    border-radius: 1vh;
+    background-color: #fff;
+    color:#000;
+    border: 1.5px solid #afafaf;
+    margin:1em 0.5em;
+    &:hover{
+      background-color: #ddd;
+      transform: scale(1.1);
+    }
+  }
+}
+
+/*When Light*/
 @media (prefers-color-scheme: light) {
   .G-link {
     display: none;
@@ -126,30 +152,10 @@ button#media-pre-bt {
     color: #000;
     background-color: #fff;
     .end {
-      color: green;
+      color: #008000;
     }
     .no-con {
-      color: red;
-    }
-  }
-  button.makehtml {
-    color: #333;
-    border: 3px solid #333;
-    &::before{
-      background: #333;
-    }
-    &:hover{
-      color:#fff;
-    }
-  }
-  button#media-pre-bt {
-    color: #32cd32;
-    border-color: #32cd32;
-    &::before{
-      background-color: #32cd32;
-    }
-    &:hover{
-      color: #fff;
+      color: #ff0000;
     }
   }
   h3,
@@ -172,27 +178,7 @@ button#media-pre-bt {
       color: #00ff00;
     }
     .no-con {
-      color: red;
-    }
-  }
-  button.makehtml {
-    color: #fff;
-    border: 3px solid #fff;
-    &::before{
-      background: #fff;
-    }
-    &:hover{
-      color:#333;
-    }
-  }
-  button#media-pre-bt {
-    color: #32cd32;
-    border-color: #32cd32;
-    &::before{
-      background-color: #32cd32;
-    }
-    &:hover{
-      color:#fff;
+      color: #ff0000;
     }
   }
   h3,
