@@ -149,6 +149,8 @@ window.onload = function () {
     console.log(IMP_HTML);
     const OUTPUT_HTML = `${MAIN_HTML}${ACT_HTML}${IMP_HTML}<div style="text-align :right;"><p style="font-family: 'Lato', sans-serif;">Taki High School Business Club</p></div>`;
     OUTPUT_BOX.textContent = OUTPUT_HTML;
+    //COPYBUTTON 初期化
+    COPY_BUTTON.textContent = "コピー"
     document.getElementById("output").scrollIntoView({
       behavior: 'smooth',
       block: 'start'

@@ -29,14 +29,9 @@ label {
   font-size: 1.2em;
   font-weight: bold;
 }
-.copyright::before {
-  font-family: "Font Awesome 5 Free";
+#copyright::before {
+  font-family: "Font Awesome 6 Free";
   content: "\f1f9";
-  font-weight: 400;
-}
-.dl-content::before {
-  font-family: "Font Awesome 5 Free";
-  content: "\f15c";
   font-weight: 400;
 }
 input {
@@ -131,6 +126,19 @@ button{
     &:hover{
       background-color: #18662b;
       border-color: #18662b;
+    }
+  }
+  &#copy-button{
+    width: 10rem;
+    height: 3rem;
+    border-radius: 1vh;
+    background-color: #fff;
+    color:#000;
+    border: 1.5px solid #afafaf;
+    margin:1em 0.5em;
+    &:hover{
+      background-color: #ddd;
+      transform: scale(1.1);
     }
   }
 }
