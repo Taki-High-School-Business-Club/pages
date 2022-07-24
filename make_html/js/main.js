@@ -1,4 +1,3 @@
-//Common_function class化したらめんどそう
 function makeTwoFigure(num) {
   if (num < 10) {
     const R = "0" + num;

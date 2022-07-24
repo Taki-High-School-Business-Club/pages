@@ -81,6 +81,7 @@
                             <button type="button" id="impress-increase" class="increase-decrease">今回の感想追加</button>
                             <button type="button" id="impress-decrease" class="increase-decrease">今回の感想削減</button>
                         </li>
+                        <!-- TODO: メディア欄とプレビュー機能  -->
                         <!-- <li><label for="media">Media</label></li>
                         <p></p>
                         <p></p>
@@ -105,7 +106,7 @@
                 <div id="output-box">
                     Output
                 </div>
-                <button type="button" id="copy-button" class="makehtml">コピー <i class="fa-regular fa-copy"></i></button>
+                <button type="button" id="copy-button" class="makehtml">コピー</button>
                 <!--<div class="result">
                     <p>Console</p>
                 </div>-->
@@ -192,27 +193,7 @@
         <p id="copyright"></p>
     </footer>
     <script type="text/javascript" src="./js/main.js"></script>
-    <script>
-        //copyright
-        document.getElementById("copyright").textContent = `2021 - ${new Date().getFullYear()} Taki High School Business Club`
-        //スクロール用 ファイルにして...
-        window.addEventListener('DOMContentLoaded', () => {
-        const anchorLinks = document.querySelectorAll('a[href^="#"]');
-        const anchorLinksArr = Array.prototype.slice.call(anchorLinks);
-
-        anchorLinksArr.forEach(link => {
-            link.addEventListener('click', e => {
-            e.preventDefault();
-            const targetId = link.hash;
-            const targetElement = document.querySelector(targetId);
-            const targetOffsetTop = window.pageYOffset + targetElement.getBoundingClientRect().top;
-            window.scrollTo({
-                top: targetOffsetTop,
-                behavior: "smooth"
-                });
-            });
-            });
-        });
-    </script>
+    <script type="text/javascript" src="./js/copyright.js"></script>
+    <script type="text/javascript" src="./js/scroll.js"></script>
 </body>
 </html>
