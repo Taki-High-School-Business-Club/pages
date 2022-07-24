@@ -2,10 +2,7 @@
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/w/Taki-High-School-Business-Club/pages)
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/Taki-High-School-Business-Club/pages?style=plastic)  
 ![Bitbucket open issues](https://img.shields.io/bitbucket/issues/Taki-High-School-Business-Club/pages)
-[![GitHub pull-requests](https://img.shields.io/github/issues-pr/coko-go/TBC.svg)](https://GitHub.com/Taki-High-School-Business-Club/pages/pulls/)  
-[![GitHub watchers](https://img.shields.io/github/watchers/coko-go/TBC.svg?style=social&label=Watch&maxAge=2592000)](https://GitHub.com/coko-go/TBC/watchers/)
-[![GitHub forks](https://img.shields.io/github/forks/coko-go/TBC.svg?style=social&label=Fork&maxAge=2592000)](https://GitHub.com/Taki-High-School-Business-Club/pages/network/)
-[![GitHub stars](https://img.shields.io/github/stars/coko-go/TBC.svg?style=social&label=Star&maxAge=2592000)](https://GitHub.com/Taki-High-School-Business-Club/pages/stargazers/)  
+![Bitbucket open pull requests](https://img.shields.io/bitbucket/pr/Taki-High-School-Business-Club/pages)
 
 [![License](https://img.shields.io/badge/License-MIT-green)](https://github.com/Taki-High-School-Business-Club/pages/blob/main/LICENSE)
 
