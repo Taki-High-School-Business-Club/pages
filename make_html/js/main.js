@@ -1,3 +1,8 @@
+/**
+ * 1=>01 10=>10って感じに変えるよ!
+ * @param {number} num 
+ * @returns {string} 結果
+ */
 function makeTwoFigure(num) {
   if (num < 10) {
     const R = "0" + num;
@@ -6,6 +11,10 @@ function makeTwoFigure(num) {
     return num;
   }
 }
+/**
+ * デフォルトのが気に入らなかったので自作
+ * @returns {string} <YYYY-MM-DD HH:MM:SS UTC+0900>
+ */
 function getTime() {
   let nowDate = new Date();
   let year = nowDate.getFullYear();
@@ -18,7 +27,12 @@ function getTime() {
   let outDate = `<${year}-${month}-${date} ${hours}:${minutes}:${seconds} UTC+0900>`;
   return outDate;
 }
-function addBr(sen){
+/**
+ * \nを見つけて<br>を置くよ!
+ * @param {string} sen 
+ * @returns {string} <br>を追加したよ!
+ */
+function addBr(sen) {
   const spIn = sen.split("\n");
   const spIn_len = spIn.length;
   console.log(spIn_len);
@@ -36,48 +50,59 @@ class Base {
   label;
   beforeHtml;
   afterHtml;
-  constructor(counter,mode,label,beforeHtml,afterHtml) {
+  constructor(counter, mode, label, beforeHtml, afterHtml) {
     this.counter = counter;
     this.mode = mode;
     this.label = label;
     this.beforeHtml = beforeHtml;
     this.afterHtml = afterHtml;
   }
-  increaseButton() {return;}
-  decreaseButton() {return;}
+  increaseButton() {
+    return;
+  }
+  decreaseButton() {
+    return;
+  }
   actAndImpMakeHtml() {
     let formContent = new Array();
     let liText = "";
     let output = "";
-    for(let i = 0; i < this.counter; i++){
-      const getFormId = document.getElementById(`${this.mode + makeTwoFigure(i+1)}`);
+    for (let i = 0; i < this.counter; i++) {
+      const getFormId = document.getElementById(
+        `${this.mode + makeTwoFigure(i + 1)}`
+      );
       // * コンソール関連の処理入れたい!!!
-      if(getFormId.value == ""){
+      if (getFormId.value == "") {
         formContent[i] = "";
-      }else{
+      } else {
         formContent[i] = `<li>${getFormId.value}</li>`;
       }
       liText = liText + formContent[i];
       //console.log(formContent[i]);
     }
-    if(liText != ""){
-      output = this.beforeHtml + liText + this.afterHtml
+    if (liText != "") {
+      output = this.beforeHtml + liText + this.afterHtml;
     }
     return output;
   }
-  increaseForm(){
-    let a = document.getElementById(`li-${this.mode + makeTwoFigure(this.counter - 1)}`);
+  increaseForm() {
+    let a = document.getElementById(
+      `li-${this.mode + makeTwoFigure(this.counter - 1)}`
+    );
     let nowID = makeTwoFigure(this.counter);
     let htmlCode;
-    htmlCode = this.mode == "act" ? `<input type="text" placeholder="活動内容${nowID}" id="act${nowID}">` : `<textarea type="text" placeholder="今回の感想${nowID}" id="imp${nowID}"></textarea>`
+    htmlCode =
+      this.mode == "act"
+        ? `<input type="text" placeholder="活動内容${nowID}" id="act${nowID}">`
+        : `<textarea type="text" placeholder="今回の感想${nowID}" id="imp${nowID}"></textarea>`;
     a.insertAdjacentHTML(
       "afterend",
-      `<li id="${
-        "li-" + this.mode + nowID
-      }"><label for="active0">${this.label + nowID}</label><br>${htmlCode}</li>` // <input type="text" placeholder="${this.label + nowID}" id="${this.mode + nowID}">
+      `<li id="${"li-" + this.mode + nowID}"><label for="active0">${
+        this.label + nowID
+      }</label><br>${htmlCode}</li>` // <input type="text" placeholder="${this.label + nowID}" id="${this.mode + nowID}">
     );
   }
-  decreaseCounterCheck(counter){
+  decreaseCounterCheck(counter) {
     if (counter > 1) {
       counter--;
       console.log("Decrease!!");
@@ -89,7 +114,7 @@ class Base {
     return counter;
   }
   set counter(counter) {
-    this.counter = counter; 
+    this.counter = counter;
   }
   get counter() {
     return this.counter;
@@ -118,16 +143,45 @@ class Impression extends Base {
   }
 }
 //宣言
-const MAIN_SEN = document.getElementById("main")//main_Sentenceのform
+const MAIN_SEN = document.getElementById("main"); //main_Sentenceのform
 const HTML_BUTTON = document.getElementById("make-html");
 let activeCounter = 3; //初期値
 let impressionCounter = 2; // 初期値
-const ACTIVE = new Active(activeCounter,"act","活動内容",'<div style="border-radius: 5px; border: 1px dashed #ffb6c1;font-size: 100%; margin:1.0em;" class="yomogi"><div style="padding-left:1em;"><strong><p>活動内容</p></strong><ul>','</ul></div></div>');
-const IMPRESSION = new Impression(impressionCounter,"imp","今回の感想",'<div style="margin: 1em;padding: 0;border: 1px solid #000;border-radius: 1vh;"><p style="padding: 0.5em; font-weight:bold;">今回の感想</p><div class="box-content"><ul>','</ul></div></div>');
+const ACTIVE = new Active(
+  activeCounter,
+  "act",
+  "活動内容",
+  '<div style="border-radius: 5px; border: 1px dashed #ffb6c1;font-size: 100%; margin:1.0em;" class="yomogi"><div style="padding-left:1em;"><strong><p>活動内容</p></strong><ul>',
+  "</ul></div></div>"
+);
+const IMPRESSION = new Impression(
+  impressionCounter,
+  "imp",
+  "今回の感想",
+  '<div style="margin: 1em;padding: 0;border: 1px solid #000;border-radius: 1vh;"><p style="padding: 0.5em; font-weight:bold;">今回の感想</p><div class="box-content"><ul>',
+  "</ul></div></div>"
+);
 const OUTPUT_BOX = document.getElementById("output-box");
 const COPY_BUTTON = document.getElementById("copy-button");
-//* イベント
+// イベント
 window.onload = function () {
+  const anchorLinks = document.querySelectorAll('a[href^="#"]');
+
+  const anchorLinksArr = Array.prototype.slice.call(anchorLinks);
+
+  anchorLinksArr.forEach((link) => {
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
+      const targetId = link.hash;
+      const targetElement = document.querySelector(targetId);
+      const targetOffsetTop =
+        window.pageYOffset + targetElement.getBoundingClientRect().top;
+      window.scrollTo({
+        top: targetOffsetTop,
+        behavior: "smooth",
+      });
+    });
+  });
   document.getElementById("main").addEventListener("change", function () {
     //console.log("Change action");
     //console.log(this.value);
@@ -149,22 +203,25 @@ window.onload = function () {
     const OUTPUT_HTML = `${MAIN_HTML}${ACT_HTML}${IMP_HTML}<div style="text-align :right;"><p style="font-family: 'Lato', sans-serif;">Taki High School Business Club</p></div>`;
     OUTPUT_BOX.textContent = OUTPUT_HTML;
     //COPYBUTTON 初期化
-    COPY_BUTTON.textContent = "コピー"
+    COPY_BUTTON.textContent = "コピー";
     document.getElementById("output").scrollIntoView({
-      behavior: 'smooth',
-      block: 'start'
+      behavior: "smooth",
+      block: "start",
     });
     //CSS:
     // console.log(`Active = ${ACTIVE.counter}`)
     // console.log(`Impression = ${IMPRESSION.counter}`)
   };
-  COPY_BUTTON.onclick = function(){
-    navigator.clipboard.writeText(OUTPUT_BOX.textContent).then(function(){
-      COPY_BUTTON.textContent = "コピー完了"
-    },function(){
-      alert("コピー失敗したようなんだよなあ...")
-    });
-  }
+  COPY_BUTTON.onclick = function () {
+    navigator.clipboard.writeText(OUTPUT_BOX.textContent).then(
+      function () {
+        COPY_BUTTON.textContent = "コピー完了";
+      },
+      function () {
+        alert("コピー失敗したようなんだよなあ...");
+      }
+    );
+  };
   //Active Increase and Decrease;
   document.getElementById("active-increase").onclick = function () {
     ACTIVE.counter = activeCounter;
@@ -188,3 +245,8 @@ window.onload = function () {
     impressionCounter = IMPRESSION.counter;
   };
 };
+/*copyright */
+let startYear = 2021;
+document.getElementById(
+  "copyright"
+).textContent = `${startYear} - ${new Date().getFullYear()} Taki High School Business Club`;
